@@ -1,0 +1,116 @@
+:root{
+    --bg-color: hsl(0, 0%, 100%);
+    --bg-button: hsl(240, 9%, 89%);
+    --bg-button-focus: hsl(194, 97%, 31%);
+    --primary-color: hsl(240, 7%, 21%);
+}
+
+.dark{
+    --bg-color: hsl(240, 5%, 7%);
+    --bg-button: hsl(240, 6%, 17%);
+    --bg-button-focus: hsl(195, 74%, 15%); 
+    --primary-color: hsl(240, 7%, 78%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    background-color: var(--bg-color);
+    color:var(--primary-color);
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.color-mode{
+    position: absolute;
+    right: 6rem;
+    top: 3rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 82.1rem;
+    padding: 150px 0 0;
+    margin-inline: auto;
+    justify-content: space-evenly;
+}
+
+/*<tiempo izq/>*/
+.tiempo{
+    font-size: 8rem;
+    color: var(--primary-color);
+}
+.controles{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: content-box;
+    padding: 1rem;
+}
+svg {
+    stroke: var(--primary-color);
+    transition: transform 0.8s ease;
+}
+svg:hover{
+    transform: scale(1.15);
+}
+.pause , .play {
+    color: var(--primary-color);
+}
+/*<tiempo izq/>*/
+
+
+
+
+/*<musica der/>*/
+.grid-musica{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+}
+#detalles-musica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+
+.grid-musica button{
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 2rem;
+    height: 10.5rem;
+    width: 9.5rem;
+    background-color: var(--bg-button);
+}
+
+input.control-volumen{
+    appearance: none;
+    width: 65%;
+    height: 0.2rem;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+}
+#detalles-musica:hover{
+    transform: scale(1.15);
+  
+}
+/*<musica der/>*/
+
